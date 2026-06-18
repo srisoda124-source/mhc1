@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHC1 - ศูนย์สุขภาพจิตที่ 1 เชียงใหม่</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00b4d8;
+            --accent-color: #ff9f1c;
+            --dark-blue: #0b2545;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        /* Top Nav */
+        .navbar {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .navbar-brand, .nav-link {
+            color: var(--dark-blue) !important;
+        }
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            font-weight: 700;
+        }
+
+        /* Hero Section Cover */
+        .hero-bg {
+            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: #ffffff;
+        }
+
+        /* Component Cards Dashboard */
+        .dashboard-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .service-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            background: rgba(0, 102, 204, 0.08);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+        .section-heading {
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 30px;
+        }
+
+        /* FAQ Timeline style */
+        .faq-item {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: var(--dark-blue);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <i class="fa-solid fa-hand-holding-heart text-primary me-2 fs-3"></i>
+                <div>
+                    <span class="fs-6 d-block text-muted fw-normal" style="font-size: 0.75rem !important;">กรมสุขภาพจิต</span>
+                    MHC1 Chiangmai
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto small fw-bold text-uppercase">
+                    <li class="nav-item px-2"><a class="nav-link active" href="#home">หน้าแรก</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="#about">ประวัติและข้อมูลองค์กร</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="#services">หน้าที่และอำนาจ</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="#faq">คำถามที่พบบ่อย</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="#contact">ติดต่อเรา</a></li>
+                </ul>
+                <a href="forms-validation.html" class="btn btn-primary rounded-pill px-3 btn-sm fw-bold ms-lg-3">ยื่นคำร้องออนไลน์</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2 text-uppercase">บริการภาครัฐออนไลน์</span>
+                    <h1 class="display-4 fw-bold mb-3">ศูนย์กลางข้อมูลบริการวิชาการ<br>ระบบสุขภาพจิตเขตสุขภาพที่ 1</h1>
+                    <p class="fs-5 opacity-75 mb-4">รวบรวมข้อมูลโครงสร้างงาน คลังสารสนเทศสุขภาพจิต ระบบส่งเสริมและป้องกันปัญหา ตลอดจนช่องทางแบบฟอร์มขอรับคำปรึกษาสำหรับประชาชนและภาคีเครือข่าย</p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="forms-validation.html" class="btn btn-warning btn-lg fw-bold px-4 rounded-3 text-dark">
+                            <i class="fa-solid fa-file-signature me-2"></i>ลงทะเบียนผู้ป่วยใหม่
+                        </a>
+                        <a href="#about" class="btn btn-outline-light btn-lg px-4 rounded-3">อ่านประกาศล่าสุด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container mt-n4 position-relative" style="z-index: 5;">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card dashboard-card border-0 p-4 text-center text-lg-start">
+                    <span class="text-muted small fw-bold text-uppercase d-block mb-1">คำร้องออนไลน์ปีนี้</span>
+                    <h2 class="display-5 fw-bold text-primary mb-0">128,420 <span class="fs-6 fw-normal text-muted">ราย</span></h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dashboard-card border-0 p-4 text-center text-lg-start">
+                    <span class="text-muted small fw-bold text-uppercase d-block mb-1">ระยะเวลาดำเนินงานเฉลี่ย</span>
+                    <h2 class="display-5 fw-bold text-dark mb-0">2.4 <span class="fs-6 fw-normal text-muted">วันทำการ</span></h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card dashboard-card border-0 p-4 text-center text-lg-start">
+                    <span class="text-muted small fw-bold text-uppercase d-block mb-1">ความพึงพอใจการให้บริการ</span>
+                    <h2 class="display-5 fw-bold text-success mb-0">96% <span class="fs-6 fw-normal text-muted">ยอดเยี่ยม</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5 py-3">
+
+        <section id="services" class="mb-5 pb-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="section-heading mb-1">บริการยอดนิยม</h2>
+                    <p class="text-muted small mb-0">เข้าถึงระบบบริการสาธารณสุขทางเทคโนโลยีดิจิทัลอย่างรวดเร็ว</p>
+                </div>
+                <div class="mt-3 mt-sm-0">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="ค้นหาบริการ เช่น ใบอนุญาต, ร้องเรียน">
+                        <button class="btn btn-primary btn-sm" type="button">ค้นหา</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <a href="forms-validation.html" class="text-decoration-none text-dark">
+                        <div class="card dashboard-card h-100 p-4">
+                            <div class="service-number mb-3">01</div>
+                            <h6 class="fw-bold text-primary">ลงทะเบียนผู้ป่วยใหม่</h6>
+                            <p class="text-muted small mb-0">ลงทะเบียนผู้ป่วยใหม่และยื่นส่งเอกสารผ่านระบบประเมินจิตวิทยา</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="card dashboard-card h-100 p-4">
+                        <div class="service-number mb-3">02</div>
+                        <h6 class="fw-bold">ติดตามสถานะ</h6>
+                        <p class="text-muted small mb-0">ตรวจสอบความคืบหน้าคำร้องและนัดหมายด้วยเลขบัตรประชาชน</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href="#about" class="text-decoration-none text-dark">
+                        <div class="card dashboard-card h-100 p-4">
+                            <div class="service-number mb-3">03</div>
+                            <h6 class="fw-bold">ข้อมูล & เทคโนโลยี</h6>
+                            <p class="text-muted small mb-0">คลังความรู้สุขภาพจิตและสารเสพติดระบบดิจิทัลสำหรับภาคีเครือข่าย</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="card dashboard-card h-100 p-4">
+                        <div class="service-number mb-3">04</div>
+                        <h6 class="fw-bold">ร้องเรียน/เสนอแนะ</h6>
+                        <p class="text-muted small mb-0">แจ้งปัญหาการเข้าถึงบริการสาธารณสุขและติดตามผลพัฒนาสังคม</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row g-4 mb-5">
+            <div class="col-lg-7">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="fw-bold text-dark mb-0">ยุทธศาสตร์และค่านิยมองค์กร</h4>
+                    <a href="#about" class="btn btn-link btn-sm text-decoration-none p-0">ดูทั้งหมด</a>
+                </div>
+                
+                <div class="card border-0 p-4 shadow-sm bg-white mb-3">
+                    <div class="row align-items-center">
+                        <div class="col-2 text-center">
+                            <span class="badge bg-primary px-2 py-3 rounded text-uppercase fw-bold d-block">MHC<br>SUN</span>
+                        </div>
+                        <div class="col-10">
+                            <h6 class="fw-bold text-primary mb-1">ค่านิยมหลักของหน่วยงาน (Core Value)</h6>
+                            <p class="text-muted small mb-0">Moral (คุณธรรม) | Happy (สร้างสุข) | Creative (สร้างสรรค์) | Smart (ทันสมัย) | Unity (สามัคคี) | Network (พัฒนาเครือข่าย)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 p-4 shadow-sm bg-white">
+                    <div class="row align-items-center">
+                        <div class="col-2 text-center">
+                            <span class="badge bg-warning text-dark px-2 py-3 rounded fw-bold d-block">วิสัย<br>ทัศน์</span>
+                        </div>
+                        <div class="col-10">
+                            <h6 class="fw-bold text-dark mb-1">MHC1 Vision</h6>
+                            <p class="text-muted small mb-0">"เป็นองค์กรหลักด้านการส่งเสริม ป้องกัน บริการปรึกษาปัญหาสุขภาพจิตและสารเสพติดระดับเขตสุขภาพ ด้วยระบบเทคโนโลยีดิจิทัล เพื่อให้ประชาชนสุขภาพจิตดี เจ้าหน้าที่มีความสุข"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card border-0 p-4 shadow-sm bg-white h-100">
+                    <h5 class="fw-bold text-dark mb-3">สถานะการให้บริการตามยุทธศาสตร์</h5>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small mb-1">
+                            <span>สร้างความรอบรู้พฤติกรรมสุขภาพจิต</span>
+                            <span class="fw-bold">84%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 84%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small mb-1">
+                            <span>ขับเคลื่อนนวัตกรรมด้วยเทคโนโลยีดิจิทัล</span>
+                            <span class="fw-bold">62%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 62%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small mb-1">
+                            <span>บูรณาการงานผ่านเครือข่ายเขตสุขภาพ (Sandbox)</span>
+                            <span class="fw-bold">91%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 91%"></div>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-0 mt-2" style="font-size: 0.75rem;">ข้อมูลตัวอย่างสำหรับสอบถาม progress, cards และ dashboard section ในหน่วยงานรัฐ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-5">
+            <div class="card border-0 shadow-sm p-4 p-md-5 bg-white">
+                <h3 class="fw-bold text-dark mb-4 border-bottom pb-2">ข้อมูลและประวัติองค์กร</h3>
+                
+                <h5 class="fw-bold text-primary mt-3"><i class="fa-solid fa-clock-rotate-left me-2"></i>ความเป็นมาของศูนย์สุขภาพจิตที่ 1</h5>
+                <p class="text-muted small" style="text-align: justify; line-height: 1.7;">
+                    ศูนย์สุขภาพจิตเป็นหน่วยงานระดับกอง ขึ้นตรงต่อกรมสุขภาพจิต กระทรวงสาธารณสุข มีวิวัฒนาการมาจากศูนย์สุขภาพจิตภาค (ศูนย์สุขภาพจิต 2) ตั้งขึ้นตาม พ.ร.บ. ปรับปรุงกระทรวง ทบวง กรม ฉบับที่ 7 พ.ศ. 2535 เพื่อรับผิดชอบ 17 จังหวัดภาคเหนือ ต่อมาในปี พ.ศ. 2542 ได้มีการปฏิรูปการจัดตั้งศูนย์สุขภาพจิตเขตขึ้น และพัฒนาเป็นศูนย์สุขภาพจิตที่ 10 ภายหลังจากการปฏิรูประบบราชการในปี พ.ศ. 2546 จึงได้ปรับเปลี่ยนโครงสร้างเป็นหน่วยงานประสานงานวิชาการเพื่อทำหน้าที่ขับเคลื่อนระบบสุขภาพจิตที่มีประสิทธิภาพ 
+                    ปัจจุบัน <strong>ศูนย์สุขภาพจิตที่ 1</strong> ตั้งอยู่ ณ บ้านเลขที่ 131 ถนนช่างหล่อ ตำบลหายยา อำเภอเมือง จังหวัดเชียงใหม่ 50100 ทำหน้าที่รับผิดชอบดูแลเขตพื้นที่ตรวจราชการเขตที่ 1 ครอบคลุม 8 จังหวัดภาคเหนือตอนบน ได้แก่ <strong>จังหวัดเชียงใหม่ ลำพูน ลำปาง แม่ฮ่องสอน เชียงราย พะเยา แพร่ และน่าน</strong>
+                </p>
+
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded-3">
+                            <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-bullseye text-danger me-2"></i>พันธกิจ 4 ด้านสำคัญ</h6>
+                            <ul class="text-muted small ps-3 mb-0">
+                                <li class="mb-1">ศึกษา วิเคราะห์ วิจัยและพัฒนาองค์ความรู้การส่งเสริมป้องกันปัญหาสุขภาพจิตและสารเสพติด</li>
+                                <li class="mb-1">พัฒนาศักยภาพเครือข่ายระดับเขตโดยการถ่ายทอดองค์ความรู้เทคโนโลยี</li>
+                                <li class="mb-1">เฝ้าระวัง วางแผนป้องกันแก้ไขปัญหาสุขภาพด้วยระบบสารสนเทศที่มีคุณภาพ</li>
+                                <li>นิเทศ ติดตามผลการดำเนินงานสุขภาพจิตของเครือข่ายอย่างต่อเนื่อง</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-3 bg-light rounded-3">
+                            <h6 class="fw-bold text-dark mb-2"><i class="fa-solid fa-gavel text-primary me-2"></i>หน้าที่และอำนาจตามกฎหมาย</h6>
+                            <p class="text-muted small mb-0" style="font-size: 0.8rem;">
+                                ตามกฎหมายแบ่งส่วนราชการ กรมสุขภาพจิต พ.ศ. 2545 ศูนย์สุขภาพจิตที่ 1-12 มีอำนาจหน้าที่ในการทำวิจัยเพื่อส่งเสริมป้องกัน, ถ่ายทอดเทคโนโลยีทางใจ, จัดการระบบเฝ้าระวังสารสนเทศที่มีคุณภาพสูง, และนิเทศงานร่วมกับหน่วยงานภาคีในพื้นที่ที่ได้รับมอบหมาย
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="downloads" class="mb-5">
+            <h4 class="fw-bold text-dark mb-1">เอกสารและแบบฟอร์ม</h4>
+            <p class="text-muted small mb-3">ตัวอย่างการเสนอรายการเอกสารในรูปแบบ table ที่ responsive และอ่านง่าย</p>
+            
+            <div class="card border-0 shadow-sm bg-white overflow-hidden">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light small text-uppercase">
+                            <tr>
+                                <th style="width: 50%;">ชื่อเอกสาร</th>
+                                <th style="width: 15%;">ประเภท</th>
+                                <th style="width: 20%;">อัปเดตล่าสุด</th>
+                                <th style="width: 15%;" class="text-center">ดาวน์โหลด</th>
+                            </tr>
+                        </thead>
+                        <tbody class="small">
+                            <tr>
+                                <td class="fw-bold text-dark">คู่มือการลงทะเบียนผู้ป่วยใหม่</td>
+                                <td><span class="badge bg-info text-dark">คู่มือ</span></td>
+                                <td class="text-muted">11 มิ.ย. 2569</td>
+                                <td class="text-center"><a href="forms-validation.html" class="btn btn-outline-primary btn-sm px-3">PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-dark">แบบฟอร์มลงทะเบียนประวัติผู้ป่วยใหม่ (ฉบับพิมพ์)</td>
+                                <td><span class="badge bg-secondary text-white">แบบฟอร์ม</span></td>
+                                <td class="text-muted">05 มิ.ย. 2569</td>
+                                <td class="text-center"><a href="forms-validation.html" class="btn btn-outline-primary btn-sm px-3">PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-dark">ประกาศมาตรฐานระยะเวลาการให้บริการประชาชนประจำปี</td>
+                                <td><span class="badge bg-success text-white">ประกาศ</span></td>
+                                <td class="text-muted">01 มิ.ย. 2569</td>
+                                <td class="text-center"><a href="#" class="btn btn-outline-primary btn-sm px-3">PDF</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="mb-5">
+            <h4 class="fw-bold text-dark mb-4"><i class="fa-solid fa-circle-question text-primary me-2"></i>คำถามที่พบบ่อย (FAQ)</h4>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 p-4 shadow-sm bg-white h-100 faq-item">
+                        <h6 class="fw-bold text-dark mb-2">1. ศูนย์สุขภาพจิตที่ 1 ตั้งอยู่ที่ไหน?</h6>
+                        <p class="text-muted small mb-0"><strong>คำตอบ:</strong> เลขที่ 131 ถนนช่างหล่อ ตำบลหายยา อำเภอเมือง จังหวัดเชียงใหม่ 50100 (ใกล้ประตูเชียงใหม่) โทรศัพท์ติดต่อเบอร์ 053-280 556</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 p-4 shadow-sm bg-white h-100 faq-item">
+                        <h6 class="fw-bold text-dark mb-2">2. สามารถเข้ารับการรักษาโรคทางจิตเวชที่ศูนย์สุขภาพจิตที่ 1 ได้หรือไม่?</h6>
+                        <p class="text-muted small mb-0"><strong>คำตอบ:</strong> <span class="text-danger fw-bold">ไม่สามารถเข้ารับการรักษาพยาบาลโดยตรงได้</span> เนื่องจากศูนย์สุขภาพจิตที่ 1 เป็นหน่วยงานวิชาการและสนับสนุนเครือข่าย ไม่มีจิตแพทย์ประจำการรับยา อย่างไรก็ดี ท่านสามารถนัดหมายเข้ามาพูดคุยเพื่อขอรับคำปรึกษาเบื้องต้นกับนักจิตวิทยาประจำศูนย์ได้ หรือติดต่อสายด่วนสุขภาพจิต 1323 ครับ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-5">
+                    <div class="p-4 h-100 bg-white shadow-sm rounded-4">
+                        <h4 class="fw-bold text-dark mb-3">ติดต่อหน่วยงาน</h4>
+                        <p class="text-muted small mb-4" style="line-height: 1.6;">
+                            <strong>ศูนย์สุขภาพจิตที่ 1 เชียงใหม่</strong><br>
+                            อาคารศูนย์วิชาการกระทรวงสาธารณสุข ถนนช่างหล่อ<br>
+                            อำเภอเมือง จังหวัดเชียงใหม่ 50100<br><br>
+                            <strong>โทร:</strong> 053-280 556<br>
+                            <strong>อีเมล:</strong> contact@mhc1.go.th<br>
+                            <strong>เวลาทำการ:</strong> จันทร์-ศุกร์ 08:30 - 16:30 น. (เว้นวันหยุดราชการ)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 bg-white">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">ชื่อ-นามสกุล</label>
+                                    <input type="text" class="form-control bg-light" placeholder="ระบุชื่อของคุณ">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">อีเมล</label>
+                                    <input type="email" class="form-control bg-light" placeholder="example@mail.com">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">หัวข้อ</label>
+                                <select class="form-select bg-light">
+                                    <option>สอบถามบริการปรึกษา</option>
+                                    <option>ขอรับสื่อวิชาการ/นวัตกรรม</option>
+                                    <option>ประสานงานเครือข่ายเขตสุขภาพ</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">ข้อความ</label>
+                                <textarea class="form-control bg-light" rows="3" placeholder="ระบุรายละเอียดที่ต้องการติดต่อ..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold" style="background: var(--dark-blue); border: none;">ส่งข้อความ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center small">
+                <p class="mb-2 mb-md-0 opacity-75">&copy; 2026 กรมบริการดิจิทัลประชาชน | ศูนย์สุขภาพจิตที่ 1 เชียงใหม่. All Rights Reserved.</p>
+                <p class="mb-0 text-muted" style="font-size: 0.8rem;">คลังหน้าตัวอย่างภาครัฐ (gov.th examples)</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="landingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="landingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 20px; overflow: hidden;">
+                <div class="row g-0">
+                    <div class="col-lg-5 d-none d-lg-block bg-primary text-center" style="background: linear-gradient(135deg, #0b2545, #0066cc);">
+                        <div class="p-5 text-white h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <i class="fa-solid fa-hand-holding-heart display-1 mb-4 text-white-50"></i>
+                                <h3 class="fw-bold">MHC1</h3>
+                                <p class="small text-white-50">Mental Health Center 1</p>
+                            </div>
+                            <p class="small mb-0 opacity-75">ศูนย์สุขภาพจิตที่ 1 เชียงใหม่<br>กรมสุขภาพจิต</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 bg-white">
+                        <div class="modal-body p-4 p-md-5">
+                            <div class="text-center text-lg-start mb-4">
+                                <span class="badge bg-light text-primary fw-bold mb-2 px-3 py-2 rounded-pill">ยินดีต้อนรับเข้าสู่ระบบ</span>
+                                <h3 class="fw-bold text-dark" id="landingModalLabel">บริการด่วนสาธารณสุข</h3>
+                                <p class="text-muted small">เลือกช่องทางบริการที่ท่านต้องการ เพื่อความสะดวกรวดเร็วในการรับบริการในเขตสุขภาพที่ 1</p>
+                            </div>
+
+                            <div class="d-grid gap-3">
+                                <a href="forms-validation.html" class="btn btn-primary btn-lg p-3 rounded-4 d-flex align-items-center text-start border-0 shadow-sm" style="background: #0066cc;">
+                                    <div class="bg-white bg-opacity-25 rounded-3 p-2 me-3 text-center" style="width: 45px; height: 45px;">
+                                        <i class="fa-solid fa-user-plus text-white fs-5"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold text-white small">ลงทะเบียนผู้ป่วยใหม่</div>
+                                        <div class="text-white-50" style="font-size: 0.75rem;">กรอกประวัติและคัดกรองเบื้องต้นเพื่อปรึกษานักจิตวิทยา</div>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right text-white-50 ms-2"></i>
+                                </a>
+
+                                <a href="#services" data-bs-dismiss="modal" class="btn btn-light btn-lg p-3 rounded-4 d-flex align-items-center text-start border-0 shadow-sm" style="background: #eef4fa;">
+                                    <div class="bg-warning bg-opacity-25 rounded-3 p-2 me-3 text-center" style="width: 45px; height: 45px;">
+                                        <i class="fa-solid fa-square-poll-horizontal text-warning fs-5"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold text-dark small">แบบประเมินสุขภาพจิตออนไลน์</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">คัดกรองพฤติกรรมและความเครียดเขตสุขภาพที่ 1</div>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right text-muted ms-2"></i>
+                                </a>
+                            </div>
+
+                            <hr class="my-4 text-muted opacity-25">
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-outline-secondary w-100 rounded-pill py-2 small fw-bold" data-bs-dismiss="modal">
+                                    เข้าสู่เว็บไซต์หลัก <i class="fa-solid fa-arrow-right ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var myModal = new bootstrap.Modal(document.getElementById('landingModal'));
+            myModal.show();
+        });
+    </script>
+</body>
+</html>

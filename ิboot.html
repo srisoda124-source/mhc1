@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Widget</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        /* ปรับแต่งการแสดงผลการ์ดเพิ่มเติม */
+        .profile-card {
+            max-width: 450px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+        /* พื้นหลังส่วนบนจำลองกรอบรูปภาพ */
+        .cover-photo {
+            height: 160px;
+            background: linear-gradient(to bottom, #e9ecef, #ced4da);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cover-photo i {
+            font-size: 3rem;
+            color: #adb5bd;
+        }
+        /* ตกแต่งปุ่มให้มีความโค้งมนและสีสันใกล้เคียงกับภาพ */
+        .btn-contact {
+            background-color: #2b78c5;
+            color: white;
+            border: none;
+        }
+        .btn-contact:hover {
+            background-color: #1f5ca0;
+            color: white;
+        }
+        .btn-view-profile {
+            background-color: #d0e1fd;
+            color: #1f5ca0;
+            border: 1px solid #b6d4fe;
+        }
+        .btn-view-profile:hover {
+            background-color: #b6d4fe;
+            color: #17467a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card profile-card bg-white">
+        
+        <div class="cover-photo">
+            <i class="bi bi-image"></i>
+        </div>
+
+        <div class="card-body p-4">
+            
+            <div class="mb-3">
+                <h4 class="card-title fw-bold mb-1 text-dark">
+                    สมชาย ใจดี (Somchai Jaidee)
+                </h4>
+                <p class="text-muted mb-0">Full Stack Developer</p>
+            </div>
+            
+            <hr class="text-muted my-3">
+
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 border-bottom">
+                    <span class="text-dark"><span class="me-2">•</span>Projects: 15</span>
+                    <span class="badge rounded-3 px-3 py-2 text-white" style="background-color: #1976d2;">15</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 border-bottom">
+                    <span class="text-dark"><span class="me-2">•</span>Followers: 2.5k</span>
+                    <span class="badge rounded-3 px-3 py-2 text-white" style="background-color: #2e7d32;">2.5k</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 border-0">
+                    <span class="text-dark"><span class="me-2">•</span>Following: 400</span>
+                    <span class="badge rounded-3 px-3 py-2 text-dark" style="background-color: #ffa000;">400</span>
+                </li>
+            </ul>
+
+            <div class="d-grid gap-2 p-2 rounded-3" style="background-color: #e6f0fa;">
+                <button class="btn btn-contact py-2 fw-semibold" type="button">ติดต่อ (Contact)</button>
+                <button class="btn btn-view-profile py-2 fw-semibold" type="button">ดูโปรไฟล์ (View Profile)</button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
